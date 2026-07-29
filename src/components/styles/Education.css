@@ -1,0 +1,228 @@
+/* ─── Education Section ──────────────────────────────────────────────────── */
+.edu-section {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-container {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+}
+
+.edu-section h2 {
+  font-size: 70px;
+  font-weight: 500;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.edu-section h2 span {
+  color: var(--accentColor);
+}
+
+/* ─── Timeline wrapper ───────────────────────────────────────────────────── */
+.edu-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+/* Vertical center line */
+.edu-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(194, 164, 255, 0.4) 15%,
+    rgba(194, 164, 255, 0.4) 85%,
+    transparent
+  );
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* ─── Item ───────────────────────────────────────────────────────────────── */
+.edu-item {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: relative;
+  width: 50%;
+}
+
+.edu-left {
+  align-self: flex-start;
+  padding-right: 50px;
+  justify-content: flex-end;
+  margin-left: 0;
+}
+
+.edu-right {
+  align-self: flex-end;
+  padding-left: 50px;
+  justify-content: flex-start;
+  margin-left: 50%;
+}
+
+/* ─── Connector dot ──────────────────────────────────────────────────────── */
+.edu-connector {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edu-left .edu-connector {
+  right: -6px;
+}
+
+.edu-right .edu-connector {
+  left: -6px;
+}
+
+.edu-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accentColor);
+  box-shadow: 0 0 0 4px rgba(194, 164, 255, 0.2),
+              0 0 16px rgba(194, 164, 255, 0.5);
+  transition: box-shadow 0.3s;
+}
+
+.edu-card:hover ~ .edu-connector .edu-dot,
+.edu-item:hover .edu-dot {
+  box-shadow: 0 0 0 6px rgba(194, 164, 255, 0.3),
+              0 0 24px rgba(194, 164, 255, 0.8);
+}
+
+/* ─── Card ───────────────────────────────────────────────────────────────── */
+.edu-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 28px 32px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s;
+  position: relative;
+  overflow: hidden;
+  max-width: 460px;
+}
+
+.edu-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accentColor), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.edu-item:hover .edu-card {
+  transform: translateY(-4px);
+  border-color: rgba(194, 164, 255, 0.3);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3),
+              0 0 24px -8px rgba(194, 164, 255, 0.3);
+}
+
+.edu-item:hover .edu-card::before {
+  opacity: 1;
+}
+
+/* ─── Card content ───────────────────────────────────────────────────────── */
+.edu-period {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accentColor);
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+
+.edu-degree {
+  font-size: 16px;
+  font-weight: 600;
+  color: #eae5ec;
+  margin: 0 0 6px 0;
+  line-height: 1.4;
+}
+
+.edu-institution {
+  font-size: 13px;
+  font-weight: 400;
+  color: #9ca3af;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.edu-grade {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+}
+
+.edu-grade span {
+  color: var(--accentColor);
+  font-weight: 600;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media screen and (max-width: 900px) {
+  .edu-section h2 {
+    font-size: 44px;
+    text-align: center;
+  }
+
+  .edu-line {
+    left: 12px;
+    transform: none;
+  }
+
+  .edu-item {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 0;
+    margin-left: 0 !important;
+    justify-content: flex-start;
+    align-self: flex-start;
+  }
+
+  .edu-left,
+  .edu-right {
+    padding-right: 0;
+    padding-left: 40px;
+  }
+
+  .edu-left .edu-connector,
+  .edu-right .edu-connector {
+    left: 6px;
+    right: auto;
+  }
+
+  .edu-card {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .edu-section h2 {
+    font-size: 34px;
+  }
+
+  .edu-card {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,221 @@
+/* ─── Tech Stack Section ─────────────────────────────────────────────────── */
+.ts-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 120px 20px 140px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: var(--backgroundColor);
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  height: auto !important;
+}
+
+/* ─── Background Glow Orbs ───────────────────────────────────────────────── */
+.ts-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ts-glow-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(120, 60, 220, 0.45) 0%, transparent 70%);
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ts-glow-2 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(80, 30, 180, 0.3) 0%, transparent 70%);
+  bottom: 15%;
+  right: 10%;
+}
+
+/* ─── Heading ─────────────────────────────────────────────────────────────── */
+.ts-heading {
+  font-size: 70px !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  letter-spacing: 8px !important;
+  color: #ffffff !important;
+  position: relative !important;
+  z-index: 1 !important;
+  margin: 0 0 60px 0 !important;
+  user-select: none;
+  pointer-events: none;
+  line-height: 1.1 !important;
+}
+
+.ts-heading span {
+  color: var(--accentColor) !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* ─── Grid Wrapper ────────────────────────────────────────────────────────── */
+.ts-grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Row ────────────────────────────────────────────────────────────────── */
+.ts-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+/* ─── Card ───────────────────────────────────────────────────────────────── */
+.ts-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 82px;
+  height: 82px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  cursor: default;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle top shimmer line */
+.ts-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(194, 164, 255, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.ts-card:hover {
+  transform: translateY(-6px) scale(1.08);
+  border-color: rgba(194, 164, 255, 0.35);
+  background: rgba(194, 164, 255, 0.08);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    0 0 20px rgba(194, 164, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.ts-card:hover::before {
+  opacity: 1;
+}
+
+/* ─── Icon ───────────────────────────────────────────────────────────────── */
+.ts-icon-wrap {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ts-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: saturate(0.6) brightness(0.85);
+  transition: filter 0.25s;
+}
+
+.ts-card:hover .ts-icon {
+  filter: saturate(1) brightness(1);
+}
+
+/* ─── Name ───────────────────────────────────────────────────────────────── */
+.ts-name {
+  font-size: 9px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.45);
+  text-align: center;
+  letter-spacing: 0.3px;
+  line-height: 1;
+  transition: color 0.25s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 72px;
+}
+
+.ts-card:hover .ts-name {
+  color: rgba(194, 164, 255, 0.9);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media screen and (max-width: 1024px) {
+  .ts-card {
+    width: 70px;
+    height: 70px;
+  }
+  .ts-row {
+    gap: 10px;
+  }
+  .ts-grid-wrapper {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ts-section {
+    padding: 80px 16px 100px;
+  }
+  .ts-card {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+  }
+  .ts-icon-wrap {
+    width: 28px;
+    height: 28px;
+  }
+  .ts-row {
+    gap: 8px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center;
+  }
+  .ts-heading {
+    font-size: 36px !important;
+    top: 30px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ts-card {
+    width: 52px;
+    height: 52px;
+  }
+  .ts-name {
+    font-size: 8px;
+  }
+}
