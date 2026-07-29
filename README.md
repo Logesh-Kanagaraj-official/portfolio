@@ -4,7 +4,7 @@ Welcome to the source code for my interactive 3D personal portfolio!
 
 This project showcases my skills as a Software Engineer & Full Stack Developer using modern web technologies to create a premium, immersive digital experience.
 
-![Portfolio Preview](./public/images/portfolio-preview.jpg)
+![Portfolio Preview](./public/images/portfolio.png)
 
 ## 🛠️ Tech Stack
 - **Frontend:** React, TypeScript, HTML5, CSS3, JavaScript
@@ -15,21 +15,6 @@ This project showcases my skills as a Software Engineer & Full Stack Developer u
 - **Interactive 3D Avatar:** Custom 3D character with procedural generation, mouse tracking, and smooth idle animations.
 - **Dynamic Scroll Effects:** Immersive scrolling experience powered by GSAP.
 - **Projects Showcase:** Highlights of my latest full-stack, AI, and frontend development projects.
-
-## 🚀 Running Locally
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Logesh-Kanagaraj-official/portfolio.git
-   ```
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
 
 ## 👨‍💻 About Me
 
