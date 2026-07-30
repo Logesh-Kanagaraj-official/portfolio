@@ -58,9 +58,10 @@ export const projects: Project[] = [
     category: "Web Development",
     description:
       "A smart healthcare management platform for scheduling appointments with doctors. Includes doctor profiles, calendar-based booking, patient dashboard, and appointment reminders.",
-    tools: ["Java", "JDBC", "HTML5", "CSS3", "JavaScript", "MySQL"],
+tools: ["Python", "Django", "HTML5", "CSS3", "JavaScript", "SQLite"],
     image: "/images/project_healthcare.png",
     github: "https://github.com/Logesh-Kanagaraj/Healthcare-Appointment-Organizer",
+    live: "https://medicare-pro-yk85.onrender.com/",
   },
   {
     id: 3,
