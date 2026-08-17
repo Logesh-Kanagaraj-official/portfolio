@@ -18,7 +18,7 @@ This project showcases my skills as a Software Engineer & Full Stack Developer u
 
 ## 👨‍💻 About Me
 
-I am a Full Stack Developer passionate about Artificial Intelligence, LLMs, and building scalable web applications. Explore my work at my [live site](https://logesh-kanagaraj.netlify.app/) (update with your actual URL) or connect with me on [GitHub](https://github.com/Logesh-Kanagaraj-official) and [Instagram](https://www.instagram.com/logesh__kanagaraj/).
+I am a Full Stack Developer passionate about Artificial Intelligence, LLMs, and building scalable web applications. Explore my work at my [live site](https://logesh-dev.netlify.app/) (update with your actual URL) or connect with me on [GitHub](https://github.com/Logesh-Kanagaraj-official) and [Instagram](https://www.instagram.com/logesh__kanagaraj/).
 
 ## 📜 License
 This project is open source and available under the [MIT License](LICENSE). Made with ❤️ at LokiCodeVerse.
